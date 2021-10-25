@@ -9,7 +9,7 @@
 <div>
   <a href="https://github.com/fabirino">
   <img align="left" height="170em" src="https://github-readme-stats.vercel.app/api?username=fabirino&show_icons=true&theme=city_lights&include_all_commits=true&count_private=true"/>
-  <img align="right" height="170em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=fabirino&layout=compact&langs_count=7&theme=city_lights"/>
+  <img height="170em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=fabirino&layout=compact&langs_count=7&theme=city_lights"/>
 </div>
 
 <!-- Coiding Languages -->
