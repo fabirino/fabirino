@@ -2,7 +2,7 @@
 
 
 - 🔭 I’m currently studying at UC
-- 🌱 I’m currently learning Java
+- 🌱 I’m currently struggling doing my Compiler's Project 
 - ⚡ Fun fact: I play the guitar
 <br>
 <!--  https://github.com/anuraghazra/github-readme-stats -->
