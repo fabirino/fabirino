@@ -1,8 +1,8 @@
 ### Fábio Alexandre 🔥
 
 
-- 🔭 I’m currently studying at UA - Cibersecurity
-- 🌱 I’m currently lost in CiberSecurity :)
+- 🔭 I’m currently studying at UA - Cybersecurity
+- 🌱 I’m currently lost in CyberSecurity :)
 - ⚡ Fun fact: I play the guitar
 <br>
 <!--  https://github.com/anuraghazra/github-readme-stats -->
