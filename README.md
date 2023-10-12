@@ -2,7 +2,7 @@
 
 
 - 🔭 I’m currently studying at UA - Cybersecurity
-- 🌱 I’m currently lost in CyberSecurity :)
+- 🌱 I’m currently lost in my Cryptography Project :)
 - ⚡ Fun fact: I play the guitar
 <br>
 <!--  https://github.com/anuraghazra/github-readme-stats -->
