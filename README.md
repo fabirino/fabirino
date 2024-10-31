@@ -2,7 +2,7 @@
 
 
 - 🔭 I’m currently studying at UA - Cybersecurity
-- 🌱 I’m currently chilling :)
+- 🌱 Struggling to do my thesis
 - ⚡ Fun fact: I play the guitar
 <br>
 <!--  https://github.com/anuraghazra/github-readme-stats -->
@@ -32,4 +32,4 @@
   <a href="https://open.spotify.com/user/fabalexandre8" target="_blank"><img src="https://img.shields.io/badge/Spotify-1ED760?&style=for-the-badge&logo=spotify&logoColor=white" target="_blank"></a>
   <a href="https://paypal.me/fabirino" target="_blank"><img src="https://img.shields.io/badge/PayPal-00457C?style=for-the-badge&logo=paypal&logoColor=white" target="_blank"></a>
   
-<!-- ![Snake animation](https://github.com/fabirino/fabirino/blob/output/github-contribution-grid-snake.svg)  -->
+[Snake animation](https://github.com/fabirino/fabirino/blob/output/github-contribution-grid-snake.svg)
