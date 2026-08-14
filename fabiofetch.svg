@@ -1,0 +1,156 @@
+<svg width="880" height="580" viewBox="0 0 880 580" xmlns="http://www.w3.org/2000/svg">
+  <!-- Width=880 Height=580 (if you add more content, increase Height accordingly) -->
+  <!-- Content now prints line-by-line, 1s apart, starting at 1.5s. Last line appears ~18.5s; final cursor at 19.5s -->
+  <style>
+    /* ---- Catppuccin Frappé palette ---- */
+    :root {
+      --ctp-base: #303446;
+      --ctp-mantle: #292c3c;
+      --ctp-crust: #232634;
+      --ctp-text: #c6d0f5;
+      --ctp-subtext0: #a5adce;
+      --ctp-surface1: #51576d;
+      --ctp-red: #e78284;
+      --ctp-yellow: #e5c890;
+      --ctp-green: #a6d189;
+      --ctp-blue: #8caaee;
+      --ctp-mauve: #ca9ee6;
+      --ctp-pink: #f4b8e4;
+      --ctp-lavender: #babbf1;
+    }
+
+    .bg { fill: var(--ctp-base); }
+    .titlebar { fill: var(--ctp-mantle); }
+    text { font-family: 'Fira Code', 'Courier New', monospace; }
+
+    /* ---- Prompt line "~ $> fabiofetch" ---- */
+    .prompt-sym { fill: var(--ctp-lavender); font-size: 16px; }
+    .prompt-cmd { fill: var(--ctp-green); font-size: 16px; }
+
+    .type-clip-rect {
+      animation: typewriter 1s steps(10, end) forwards;
+    }
+    @keyframes typewriter {
+      from { width: 0; }
+      to   { width: 110px; }
+    }
+
+    /* ---- Blinking cursor WHILE typing (disappears once content starts printing) ---- */
+    .typing-cursor {
+      fill: var(--ctp-green);
+      animation: typing-cursor-move 1s steps(10, end) forwards,
+                 blink 0.9s step-end infinite,
+                 hide-cursor 0.01s linear forwards;
+      animation-delay: 0s, 0s, 1.15s;
+    }
+    @keyframes typing-cursor-move {
+      from { transform: translateX(0px); }
+      to   { transform: translateX(110px); }
+    }
+    @keyframes hide-cursor {
+      to { opacity: 0; }
+    }
+
+    @keyframes fadein {
+      to { opacity: 1; }
+    }
+
+    /* ---- Each output line fades in individually. --delay is set per element ---- */
+    .print-line {
+      opacity: 0;
+      animation: fadein 0.15s ease forwards;
+      animation-delay: var(--delay);
+    }
+
+    .ascii { fill: var(--ctp-subtext0); font-size: 10px; white-space: pre; }
+    .header { fill: var(--ctp-pink); font-size: 12px; font-weight: bold; }
+    .label { fill: var(--ctp-blue); font-size: 12px; }
+    .value { fill: var(--ctp-text); font-size: 12px; }
+    .sep   { fill: var(--ctp-surface1); font-size: 12px; }
+
+    /* ---- Final prompt line + blinking cursor (after everything has printed) ---- */
+    .final-prompt {
+      opacity: 0;
+      animation: fadein 0.2s ease forwards;
+      animation-delay: 9.5s;
+    }
+    .final-cursor {
+      fill: var(--ctp-green);
+      opacity: 0;
+      animation: fadein 0.2s ease forwards, blink 0.9s step-end infinite;
+      animation-delay: 9.5s, 9.5s;
+    }
+    @keyframes blink {
+      50% { opacity: 0; }
+    }
+  </style>
+
+  <!-- Terminal Window -->
+  <rect class="bg" x="0" y="0" width="880" height="580" rx="10"/> <!-- if you add more content, increase Height accordingly -->
+  <rect class="titlebar" x="0" y="0" width="880" height="34" rx="10"/>
+  <rect class="titlebar" x="0" y="24" width="880" height="10"/>
+  <circle cx="22" cy="17" r="6" fill="#e78284"/>
+  <circle cx="44" cy="17" r="6" fill="#e5c890"/>
+  <circle cx="66" cy="17" r="6" fill="#a6d189"/>
+
+  <!-- Prompt with typing effect -->
+  <text x="30" y="65" class="prompt-sym">~ $&gt;</text>
+  <clipPath id="typeClip">
+    <rect class="type-clip-rect" x="76" y="50" height="22" width="0"/>
+  </clipPath>
+  <text x="76" y="65" class="prompt-cmd" clip-path="url(#typeClip)">fabiofetch</text>
+  <rect class="typing-cursor" x="76" y="52" width="8" height="16"/>
+
+  <g>
+    <!-- ASCII placeholder: replace with your image converted to ASCII. Rows are aligned to the info column by index -->
+    <text class="ascii print-line" x="30" y="105" style="--delay:1.5s">..................................................</text>
+    <text class="ascii print-line" x="30" y="117" style="--delay:1.5s">...........................................+*##:..</text>
+    <text class="ascii print-line" x="30" y="129" style="--delay:1.5s">........................................:+*#%%#%:.</text>
+    <text class="ascii print-line" x="30" y="141" style="--delay:1.5s">.......................................*#%%%**:...</text>
+    <text class="ascii print-line" x="30" y="153" style="--delay:1.5s">......................................=#*%%=......</text>
+    <text class="ascii print-line" x="30" y="165" style="--delay:1.5s">....................................+**:..........</text>
+    <text class="ascii print-line" x="30" y="177" style="--delay:1.5s">..................................==+-............</text>
+    <text class="ascii print-line" x="30" y="189" style="--delay:1.5s">............................ ...=**-..............</text>
+    <text class="ascii print-line" x="30" y="201" style="--delay:1.5s"> .............................+*==............... </text>
+    <text class="ascii print-line" x="30" y="213" style="--delay:1.5s">............................++-=..................</text>
+    <text class="ascii print-line" x="30" y="225" style="--delay:1.5s">..........................++-=:...................</text>
+    <text class="ascii print-line" x="30" y="237" style="--delay:1.5s">........................=-++:.....................</text>
+    <text class="ascii print-line" x="30" y="249" style="--delay:1.5s">..............:#%%%%%+==**:.......................</text>
+    <text class="ascii print-line" x="30" y="261" style="--delay:1.5s">..............#%%%%%*+=*=.........................</text>
+    <text class="ascii print-line" x="30" y="273" style="--delay:1.5s">.............*%%*=*+=++*..........................</text>
+    <text class="ascii print-line" x="30" y="285" style="--delay:1.5s">.....:+#%%%%%%%#-::==#*.  ........................</text>
+    <text class="ascii print-line" x="30" y="297" style="--delay:1.5s">...:%@%@@@@@%%###+:..*#::.........................</text>
+    <text class="ascii print-line" x="30" y="309" style="--delay:1.5s">..-@@@@%%%%=::=##:..+%%%%-........................</text>
+    <text class="ascii print-line" x="30" y="321" style="--delay:1.5s">..@@@@@%%%*++:::...+%#-...........................</text>
+    <text class="ascii print-line" x="30" y="333" style="--delay:1.5s">.-@@@@@@%+*%*+=...-%:.............................</text>
+    <text class="ascii print-line" x="30" y="345" style="--delay:1.5s">..@@@@@@%%#=%%%*.:%#..............................</text>
+    <text class="ascii print-line" x="30" y="357" style="--delay:1.5s">..=@@@@@@@%%%*%%%%%+..............................</text>
+    <text class="ascii print-line" x="30" y="369" style="--delay:1.5s">...=@@@@@@@@%%%*+%#...............................</text>
+    <text class="ascii print-line" x="30" y="381" style="--delay:1.5s">....:#@@@@#%%=%%%#................................</text>
+    <text class="ascii print-line" x="30" y="393" style="--delay:1.5s">......:*%@@@@@%*:.................................</text>
+    <text class="ascii print-line" x="30" y="405" style="--delay:1.5s">............:.....................................</text>
+
+    <!-- Fetch content: each line is its own element with its own -delay, printed 1s apart -->
+    <!-- Info column: 16 lines, aligned by index (0-15) to the first 16 ASCII rows -->
+    <text class="print-line" x="380" y="105" style="--delay:1.5s"><tspan class="header">fabiofetch</tspan><tspan class="sep"> ----------------------------------------</tspan></text>
+    <text class="print-line" x="380" y="129" style="--delay:2s"><tspan class="label">OS: </tspan><tspan class="value">Windows, Linux</tspan></text>
+    <text class="print-line" x="380" y="149" style="--delay:2.5s"><tspan class="label">Uptime: </tspan><tspan class="value">24 years</tspan></text>
+    <text class="print-line" x="380" y="169" style="--delay:3s"><tspan class="label">Host: </tspan><tspan class="value">Aveiro, Portugal</tspan></text>
+    <text class="print-line" x="380" y="189" style="--delay:3.5s"><tspan class="label">Kernel: </tspan><tspan class="value">Cybersecurity Analyst</tspan></text>
+    <text class="print-line" x="380" y="209" style="--delay:4s"><tspan class="label">IDE: </tspan><tspan class="value">Neovim btw :)</tspan></text>
+    <text class="print-line" x="380" y="229" style="--delay:4.5s"><tspan class="label">Colorscheme: </tspan><tspan class="value">Catppuccin Frappe</tspan></text>
+    <text class="print-line" x="380" y="265" style="--delay:5s"><tspan class="label">Languages.Real: </tspan><tspan class="value">Portuguese, English</tspan></text>
+    <text class="print-line" x="380" y="285" style="--delay:5.5s"><tspan class="label">Languages.Programming: </tspan><tspan class="value">C/C++, Bash, Python, Java</tspan></text>
+    <text class="print-line" x="380" y="321" style="--delay:6s"><tspan class="label">Software.Dev: </tspan><tspan class="value">Docker, Git</tspan></text>
+    <text class="print-line" x="380" y="341" style="--delay:6.5s"><tspan class="label">Software.Infra: </tspan><tspan class="value">Ansible, ElasticSearch, Grafana, Prometheus</tspan></text>
+    <text class="print-line" x="380" y="361" style="--delay:7s"><tspan class="label">Software.Cyber: </tspan><tspan class="value">Nmap, Burpsuite, Wazuh, Ghidra</tspan></text>
+    <text class="print-line" x="380" y="397" style="--delay:7.5s"><tspan class="label">Contact.Website: </tspan><tspan class="value">https://www.fabirino.com</tspan></text>
+    <text class="print-line" x="380" y="417" style="--delay:8s"><tspan class="label">Contact.Linkedin: </tspan><tspan class="value">@fabirino</tspan></text>
+    <text class="print-line" x="380" y="453" style="--delay:8.5s"><tspan class="label">Project.Active: </tspan><tspan class="value">Guitar Amp Reverse Engineering</tspan></text>
+    <text class="print-line" x="380" y="489" style="--delay:9s"><tspan class="label">Hobbies: </tspan><tspan class="value">Guitar, Gaming, CTFs</tspan></text>
+  </g>
+
+  <!-- Final prompt + blinking cursor, shown once every line has printed (positioned below the tallest content: ASCII ends ~y=309, info ends ~y=489) -->
+  <text x="30" y="530" class="prompt-sym final-prompt">~ $&gt;</text>
+  <rect class="final-cursor" x="76" y="517" width="8" height="16"/> <!-- if you add more content, increase Height accordingly -->
+</svg>
