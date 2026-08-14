@@ -145,7 +145,7 @@
     <text class="print-line" x="380" y="341" style="--delay:6.5s"><tspan class="label">Software.Infra: </tspan><tspan class="value">Ansible, ElasticSearch, Grafana, Prometheus</tspan></text>
     <text class="print-line" x="380" y="361" style="--delay:7s"><tspan class="label">Software.Cyber: </tspan><tspan class="value">Nmap, Burpsuite, Wazuh, Ghidra</tspan></text>
     <text class="print-line" x="380" y="397" style="--delay:7.5s"><tspan class="label">Contact.Website: </tspan><tspan class="value">https://www.fabirino.com</tspan></text>
-    <text class="print-line" x="380" y="417" style="--delay:8s"><tspan class="label">Contact.Linkedin: </tspan><tspan class="value">@fabirino</tspan></text>
+    <text class="print-line" x="380" y="417" style="--delay:8s"><tspan class="label">Contact.Linkedin: </tspan><tspan class="value">https://www.linkedin.com/in/fabirino/</tspan></text>
     <text class="print-line" x="380" y="453" style="--delay:8.5s"><tspan class="label">Project.Active: </tspan><tspan class="value">Guitar Amp Reverse Engineering</tspan></text>
     <text class="print-line" x="380" y="489" style="--delay:9s"><tspan class="label">Hobbies: </tspan><tspan class="value">Guitar, Gaming, CTFs</tspan></text>
   </g>
